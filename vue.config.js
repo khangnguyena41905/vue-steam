@@ -1,6 +1,7 @@
 const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
+  // Config global variable
   css: {
     loaderOptions: {
       scss: {
@@ -8,4 +9,6 @@ module.exports = defineConfig({
       },
     },
   },
+  // Register vuex decorators
+  transpileDependencies: ["vuex-module-decorators"],
 });
