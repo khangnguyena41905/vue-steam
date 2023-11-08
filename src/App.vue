@@ -1,9 +1,19 @@
 <template>
-  <nav>
+  <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view/>
+  <router-view/> -->
+  <div id="main-app">
+    <Layout>
+      <template v-slot:left>
+        <LeftMenu />
+      </template>
+      <template v-slot:right>
+        <router-view />
+      </template>
+    </Layout>
+  </div>
 </template>
 
 <style lang="scss">
@@ -28,3 +38,19 @@ nav {
   }
 }
 </style>
+
+<script lang="ts">
+import { Component } from "vue-facing-decorator";
+import LeftMenu from "@/components/LeftMenu/LeftMenu.vue";
+
+import Layout from "@/components/Layout/Layout.vue"; // @ is an alias to /src
+import BaseComponent from "./components/Base/base-component";
+
+@Component({
+  components: {
+    Layout,
+    LeftMenu,
+  },
+})
+export default class App extends BaseComponent {}
+</script>
