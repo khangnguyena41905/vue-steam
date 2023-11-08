@@ -6,6 +6,12 @@
       <h1 class="test-color bg_light-purple">TEST GLOBAL Variable</h1>
     </div>
     <div>
+      <h2>Vue Antd</h2>
+      <div>
+        <TestAntdView/>
+      </div>
+    </div>
+    <div>
       <TestVuexView/>
     </div>
   </div>
@@ -13,11 +19,13 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import TestVuexView from "./test/test-vuex-view/TestVuexView.vue"
+import TestVuexView from "./test/test-vuex-view/TestVuexView.vue";
+import TestAntdView from "./test/test-antd-view/TestAntdView.vue"
 
 @Options({
   components: {
     TestVuexView,
+    TestAntdView
   },
 })
 export default class AboutView extends Vue {}

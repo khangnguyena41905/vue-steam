@@ -4,9 +4,16 @@
 
 /* #endregion */
 
-/* #region CREATE NEW CLASSES  */
-.bg_light-purple{
-    background-color: $light-purple
+/* #region CREATE NEW SIZING CLASSES  */
+
+.w-fit-content {
+  width: fit-content;
+}
+/* #endregion */
+
+/* #region NEW BACKGROUND CLASSES */
+.bg_light-purple {
+  background-color: $light-purple;
 }
 /* #endregion */
 

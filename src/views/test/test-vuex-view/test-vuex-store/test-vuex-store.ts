@@ -4,7 +4,7 @@ import { Module, Mutation, VuexModule, getModule } from "vuex-module-decorators"
 
 @Module({ dynamic: true, store, name: "TestVuexStore" })
 class TestVuexStore extends VuexModule {
-  public stateName: string = "Basic name";
+  public stateName: string = "BASE NAME";
 
   @Mutation
   changeStateName(name: string) {

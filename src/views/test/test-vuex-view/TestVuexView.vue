@@ -5,16 +5,20 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { computed } from "vue";
+<script lang="ts">
 import { testVuexStore } from "./test-vuex-store/test-vuex-store";
+import { Vue } from "vue-class-component";
 
-const name = computed(() => {
-  return testVuexStore.stateName;
-});
+export default class TestVuexView extends Vue {
+  public get name() {
+    return testVuexStore.stateName;
+  }
 
-const changeStateName = ()=>{
-    return testVuexStore.changeStateName("state change")
+  public changeStateName() {
+    const value =
+      testVuexStore.stateName === "BASE NAME" ? "CHANGED NAME" : "BASE NAME";
+    return testVuexStore.changeStateName(value);
+  }
 }
 </script>
 
